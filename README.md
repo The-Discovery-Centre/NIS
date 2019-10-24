@@ -1,5 +1,6 @@
 # NIS
-NIS Intermediate level python problems and Solutions. 
+## Python for Kids
+NIS Intermediate level python problems and Solutions for Kids. 
 
 # October 4th Solution
 
