@@ -240,5 +240,79 @@ while True:
 
 ```
 
+# Final Assignment
+
+
+```python
+class Subject():
+    def __init__(self, name = '', score = 0):
+        self.name = name
+        self.score = score
+        self.grade = ''
+        
+        if self.score <= 39:
+            self.grade = 'F'
+
+        elif self.score <= 49:
+            self.grade = 'E'
+
+        elif self.score <= 59:
+            self.grade = 'D'
+
+        elif self.score <= 69:
+            self.grade = 'C'
+
+        elif self.score <= 79:
+            self.grade = 'B'
+
+        elif self.score <= 89:
+            self.grade = 'A'
+
+        elif self.score <= 100:
+            self.grade = 'A*'
+
+class Student():
+    def __init__(self, name = '', subjects = []):
+        self.name = name
+        self.subjects = []
+
+        for sub in subjects:
+            self.subjects.append(
+                Subject(sub['name'], sub['score'])
+                )
+
+    def showReport(self):
+        total = 0
+
+        for sub in self.subjects:
+            print("{} : {} {}".format(sub.name, sub.score, sub.grade))
+            total = total + sub.score
+
+        print("total: {}".format(total))
+
+    def getTotal(self):
+        total = 0
+
+        for sub in self.subjects:
+            total = total + sub.score
+
+        return total
+
+```
+# Challenge
+
+Given the code snipplet above and the list below
+write a program that will sort the students in order
+of merit
+
+```python
+    myList = [
+        ['Gift', 3, 7, 8, 9],
+        ['Krishna', 10, 8, 8, 10],
+        ['Ethos', 5, 1, 2, 6],
+        ['Thanos', 8, 10, 9, 9]
+    ]
+```
+Good Luck
 
 ### ???
